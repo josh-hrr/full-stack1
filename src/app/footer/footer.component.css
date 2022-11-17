@@ -1,0 +1,7 @@
+.footer{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(155, 255, 220);
+    width: 100%;
+}
