@@ -1,7 +1,11 @@
 <app-header></app-header> 
 <app-footer></app-footer>
 
-<div class="card">
+<div>
+    <button type="button" class="btn btn-primary" (click)="enable = (enable == true) ? false : true">{{enable ? 'Show' : 'Hide'}}</button>
+</div>
+
+<div class="card" *ngIf="enable">
     <div class="card-header">
         Lista de cursos
     </div> 
