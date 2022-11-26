@@ -1,23 +1,34 @@
-<app-header></app-header> 
+<app-header></app-header>  
+<div class="container">
+    <div class="row g-0 g-xl-5 g-xxl-8">
+        <div class="col-xl-4">
+            <div>
+                <button type="button" class="btn btn-primary" (click)="enable = (enable == true) ? false : true">{{enable ? 'Show' : 'Hide'}}</button>
+            </div>
+            
+            <div class="card" *ngIf="enable">
+                <div class="card-header">
+                    Lista de cursos
+                </div> 
+                    <ul class="list-group" *ngFor="let curso of listaDeCursos">
+                        <li class="list-group-item">
+                            {{curso}}
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <app-clientes></app-clientes> 
+        </div>
+    </div> 
+</div>
+
 <app-footer></app-footer>
 
-<div>
-    <button type="button" class="btn btn-primary" (click)="enable = (enable == true) ? false : true">{{enable ? 'Show' : 'Hide'}}</button>
-</div>
-
-<div class="card" *ngIf="enable">
-    <div class="card-header">
-        Lista de cursos
-    </div> 
-        <ul class="list-group" *ngFor="let curso of listaDeCursos">
-            <li class="list-group-item">
-                {{curso}}
-            </li>
-        </ul>
-</div>
 
 
-<app-clientes></app-clientes> 
+
+
 
 
 <router-outlet></router-outlet>
